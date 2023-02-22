@@ -274,9 +274,24 @@ body{
 /* Form */
 
 .form{
-   position: absolute;
+   position: fixed;
    top: 50%;
    left: 50%;
    transform: translate(-50%,-50%);
-   ;
+}
+
+input, textarea{
+   color: #ffffff;
+   padding: 5px;
+   background-color: #ffffff;
+   background: #c0630c;
+   border: 1px solid#ffffff;
+}
+
+.form-title{
+   position: fixed;
+   top: 46%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   color: #fff;
 }
