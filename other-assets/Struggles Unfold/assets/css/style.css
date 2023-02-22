@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+body{
+   background-color: #2e2e2e;
+   padding:20px;
+}
+
+.container{
+   max-width: 1200px;
+   margin:10px auto;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-start;
+   gap:20px;
+}
+
+.container .main-video-container{
+   flex:1 1 700px;
+   border-radius: 5px;
+   box-shadow: 0 5px 15px rgba(0,0,0,.1);
+   background-color: #fff;
+   padding:15px;
+}
+
+.container .main-video-container .main-video{
+   margin-bottom: 7px;
+   border-radius: 5px;
+   width: 100%;
+   height: 411px;
+}
+
+.container .main-video-container .main-vid-title{
+   font-size: 20px;
+   color:#444;
+}
+
+.container .video-list-container{
+   flex:1 1 350px;
+   height: 485px;
+   overflow-y: scroll;
+   border-radius: 5px;
+   box-shadow: 0 5px 15px rgba(0,0,0,.1);
+   background-color: #fff;
+   padding:15px;
+}
+
+.container .video-list-container::-webkit-scrollbar{
+   width: 10px;
+}
+
+.container .video-list-container::-webkit-scrollbar-track{
+   background-color: #fff;
+   border-radius: 5px;
+}
+
+.container .video-list-container::-webkit-scrollbar-thumb{
+   background-color: #444;
+   border-radius: 5px;
+}
+
+.container .video-list-container .list{
+   display: flex;
+   align-items: center;
+   gap:15px;
+   padding:10px;
+   background-color: #eee;
+   cursor: pointer;
+   border-radius: 5px;
+   margin-bottom: 10px;
+}
+
+.container .video-list-container .list:last-child{
+   margin-bottom: 0;
+}
+
+.container .video-list-container .list.active{
+   background-color: #444;
+}
+
+.container .video-list-container .list.active .list-title{
+   color:#fff;
+}
+
+.container .video-list-container .list .list-video{
+   width: 0px;
+   border-radius: 5px;
+}
+
+.container .video-list-container .list .list-title{
+   font-size: 17px;
+   color:#444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px){
+
+   .container{
+      margin:0;
+   }
+
+}
+
+@media (max-width:450px){
+
+   .container .main-video-container .main-vid-title{
+      font-size: 15px;
+      text-align: center;
+   }
+
+   .container .video-list-container .list{
+      flex-flow: column;
+      gap:10px;
+   }
+
+   .container .video-list-container .list .list-video{
+      width: 100%;
+   }
+
+   .container .video-list-container .list .list-title{
+      font-size: 15px;
+      text-align: center;
+   }
+
+}
+
+.heading{
+   font-family: 'Raleway', sans-serif;
+   color: #cea211;
+   font-size: 40px;
+   text-align: center;
+   padding: 10px;
+}
+
+.listDesc{
+   padding-top: 1em;
+   text-align: center;
+   font-weight: bolder;
+}
+
+.hr1{
+   margin-top: 1em;
+   margin-bottom: 1em;
+   border: solid 1px #777777;
+}
+
+.hr2{
+   margin-top: 1em;
+}
+
+.descLabel{
+   font-weight: bolder;
+}
+
+.desc{
+   font-family: 'Shantell Sans', cursive;
+   font-weight: bolder;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+   width: 8px;
+}
+
+::-webkit-scrollbar-track{
+   border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb{
+   background: #b4b4b4;
+   border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+   background: #777777;
+   border-radius: 50px;
+}
+
+.desc1{
+   font-family: 'Raleway', sans-serif;
+   font-weight: bolder;
+}
+
+.img{
+   width: 100px;
+   padding-right: 10px;
+}
+
+/* News Scroll */
+
+.news-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   font-family: "Roboto", sans-serif;
+   box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+   background: #7c7c7c54;
+}
+
+.news-container .title {
+   position: absolute;
+   background: #df8620;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   padding: 0 24px;
+   color: white;
+   font-weight: bold;
+   z-index: 200;
+}
+
+.news-container ul {
+   display: flex;
+   list-style: none;
+   margin: 0;
+   animation: scroll 35s infinite linear;
+}
+
+.news-container ul li {
+   white-space: nowrap;
+   padding: 3px 24px;
+   color: #ffffff;
+   position: relative;
+}
+
+.news-container ul li::after {
+   content:"";
+   width: 1px;
+   height: 100%;
+   background: #b8b8b800;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.news-container ul li:last-child::after {
+   display: none;
+}
+
+@keyframes scroll {
+   from {
+       transform: translateX(100%);
+   }
+
+   to {
+       transform: translateX(-5000px);
+
+   }
+}
+
+/* Form */
+
+.form{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   ;
+}
