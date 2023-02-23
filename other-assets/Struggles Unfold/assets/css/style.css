@@ -16,7 +16,7 @@ body{
 
 .container{
    max-width: 1200px;
-   margin:10px auto;
+   margin:0px auto;
    display: flex;
    flex-wrap: wrap;
    align-items: flex-start;
@@ -330,7 +330,7 @@ body{
    color: #cea211;
    font-size: 40px;
    text-align: center;
-   padding: 10px;
+   padding: 25px;
 }
 
 .listDesc{
@@ -386,7 +386,24 @@ body{
 .img{
    width: 75px;
    padding-right: 10px;
+   transition: 1s;
+   text-align: center;
 }
+
+.img2{
+   width: 340px;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 1em;
+   transition: 1s;
+}
+
+.img:hover{
+   object-fit: cover;
+   transform:scale(1.2);
+}
+
+
 
 /* News Scroll */
 
