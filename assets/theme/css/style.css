@@ -959,3 +959,23 @@ blockquote {
 	top: 0;
 	left: -2400px;
 }
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+   width: 8px;
+}
+
+::-webkit-scrollbar-track{
+   border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb{
+   background: #d49024;
+   border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+   background: #b57b1f;
+   border-radius: 50px;
+}
