@@ -509,6 +509,10 @@ a.text-primary:focus, a.text-primary:hover{
 
 .text-primary{
     color: #e50914 !important;
+}
+
+.text-primary1{
+    color: #e50914 !important;
     width: 55ch;
 }
 
@@ -544,11 +548,19 @@ header#main-header.menu-sticky{
     .container{
         max-width: 1170px;
     }
+
+    .phone{
+        width: 42ch;
+    }
 }
 @media (min-width : 1499px){
     .container{
         max-width: 1266px;
 
+    }
+
+    .phone{
+        width: 42ch;
     }
 }
 
@@ -556,12 +568,20 @@ header#main-header.menu-sticky{
     .search:focus , .search:hover{
         width: 220px !important;
     }
+
+    .phone{
+        width: 42ch;
+    }
 }
 
 @media (min-width:992px){
     .search-box{
         left: auto !important;
         right: 0 !important;
+    }
+
+    .phone{
+        width: 42ch;
     }
 }
 @media (max-width:991px){
@@ -643,16 +663,28 @@ header#main-header.menu-sticky{
     header .navbar ul li{
         display: block;
     }
+
+    .phone{
+        width: 42ch;
+    }
 }
 @media (min-width : 576px){
     .iq-search-bar a.search-toggle{
         display: none;
+    }
+
+    .phone{
+        width: 42ch;
     }
 }
 
 @media (min-width : 1499px){
     .container{
         max-width: 1200px;
+    }
+
+    .phone{
+        width: 42ch;
     }
 }
 
@@ -673,6 +705,10 @@ header#main-header.menu-sticky{
     header .iq-usermenu-dropdown .iq-sub-dropdown{
         width: 250px;
     }
+
+    .phone{
+        width: 42ch;
+    }
 }
 
 /* header menu responsiveness  */
@@ -680,11 +716,19 @@ header#main-header.menu-sticky{
     header .navbar ul li .sub-menu li a, header.menu-sticky .navbar ul li .sub-menu li a{
         white-space: nowrap;
     }
+
+    .phone{
+        width: 42ch;
+    }
 }
 @media screen and (max-width : 4000px) and (min-width : 1200px){
     .navbar ul li:hover a, .navbar ul li:hover i{
         color: #e50914;
         text-decoration: none;
+    }
+
+    .phone{
+        width: 42ch;
     }
 }
 @media (max-width :991px){
@@ -731,6 +775,10 @@ header#main-header.menu-sticky{
         left: auto;
         right: 0;
         top: 0;
+    }
+
+    .phone{
+        width: 42ch;
     }
 }
 
