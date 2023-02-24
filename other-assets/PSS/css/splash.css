@@ -40,6 +40,23 @@ body{
     pointer-events: all;
 }
 
+.btn{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ff0000;
+    width: 160px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 1em;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
 /* *********** Responsiveness of header ************** */
 @media (min-width : 1300px){
 
