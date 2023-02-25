@@ -12,7 +12,7 @@ body{
     background: #141414;
 }
 .container-fluid{
-    padding: 0 100px;
+    padding: 0 70px;
 }
 header#main-header{
     position: fixed;
@@ -61,7 +61,6 @@ header .navbar ul li.menu-item a{
 }
 header .navbar ul li.menu-item a:hover{
     color: #e50914 !important;
-    font-size: medium;
 }
 .navbar ul li:hover > .sub-menu{
     display: block !important;
@@ -1111,7 +1110,7 @@ a.text-primary:focus, a.text-primary:hover{
 
 /* ******************************** */
 .main-content{
-    padding-top: 40px;
+    padding-top: 100px;
 }
 
 .iq-main-header{
@@ -1123,6 +1122,11 @@ a.text-primary:focus, a.text-primary:hover{
 .iq-view-all:hover{
     color: #bf000a;
 }
+.favorites-slider .slick-list{
+    overflow: visible;
+    padding-bottom: 40px !important;
+}
+
 .favorites-slider li.slide-item{
     float: left;
     width: 100%;
@@ -2454,5 +2458,4 @@ footer .footer-top .info-share li a::before{
 }
 .textwidget .footer-link-title{
     width: 100px;
-    font-style: normal;
 }

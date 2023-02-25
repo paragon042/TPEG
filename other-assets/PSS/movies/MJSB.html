@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Paragon</title>
+   <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+
+   <!-- custom css file link  -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/splash.css">
+
+   <style>
+        #lock{ display:none; }
+            @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+            #lock{ display:none; }
+            #landscape{ display:block; }
+        }
+        @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+            #lock{ display:block; }
+            #landscape{ display:none; }
+        }
+
+        #lock{
+            font-family: 'Bebas Neue', cursive;
+            font-size: xx-large;
+            color: red;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="lock">
+        Please rotate your screen to landscape mode! <p>[Paragon]</p>
+    </div>
+    <!-- btn
+    <br>
+    <div>
+        <a href="https://paragon042.github.io/TPEG/other-assets/PSS/Home" class="btn">Go Back</a>
+    </div>
+    <br>
+    -->
+    <div id="landscape">
+        <iframe class="banner1" src="https://drive.google.com/file/d/1on-wiFj5c4gJmjW42r4SQBYu_y4fh5Eb/preview" allowfullscreen ></iframe>
+    </div>
+
+</body>
+</html>
