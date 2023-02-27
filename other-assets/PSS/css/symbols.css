@@ -2,3 +2,13 @@
     margin-left: 1rem!important;
     width: 30px;
 }
+
+.symbols1{
+    margin-left: 0.75rem!important;
+    width: 20px;
+}
+
+.ml-10{
+    margin-left: 0.3rem;
+    color: rgba(255, 255, 255, 0.671);
+}
