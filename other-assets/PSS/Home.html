@@ -23,9 +23,10 @@
   <link rel="stylesheet" href="css/scrollbar.css" />
   <link rel="stylesheet" href="css/symbols.css" />
   <script src="https://kit.fontawesome.com/5b276d351e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="popup/popup2.css" />
 </head>
 
-<body>
+<body class="" id="popup-overlay">
   <header id="main-header">
     <div class="main-header">
       <div class="container-fluid">
@@ -401,15 +402,59 @@
                 </div>
                 <div class="d-flex align-items-center r-mb-23 mt-4" data-animation-in="fadeInUp" data-delay-in="1.2">
                   <a href="intros/SUIntro.html" class="btn btn-hover iq-button"><i class="fa fa-play mr-3"></i>Play Now</a>
-                  <a href="details/Struggles Unfold.html" class="btn btn-link">More Details</a>
+                  <a href="#" class="btn btn-link" onclick="togglePopup()">More Details</a>
+                  <div class="popup" id="popup-1">
+                    <div class="popup-overlay"></div>
+                    <div class="popup-content">
+                        <section class="scroll-content">
+                        <div class="popup-close-btn" onclick="togglePopup()">&times;</div>
+                        <h1 class="popup-title">Struggles Unfold</h1>
+                        <div class="d-flex align-items-center mt-2 mt-md-3">
+                          <span style="font-weight: 500; font-size: 17px; color: white; font-family: 'Roboto', sans-serif;">&nbsp&nbsp&nbsp2023&nbsp&nbsp&nbsp&nbsp</span>
+                          <span></span>
+                          <span class="badge badge-secondary p-2">13+</span>
+                          <span class="ml-3" style="color: white; font-size: medium;">30min~</span>
+                          <br class="display-br">
+                          <img class="symbols-popup" src="images/symbols/hd icon.png">
+                          <img class="symbols-popup" src="images/symbols/closed caption.png">
+                        </div>
+                          <section class="child">
+                            <p class="child-p"><span style="font-size: larger;"></style> "Episode 1" </span><br><br><br>A group of friends who each have a struggle of their own was forced to discover all about it 
+                            when a tragic incident occurred that changed everyone's lives.
+                            Incident that left their hearts scarred, but left a strengthened faith in their souls.</p>
+                          </section>
+                          <section class="child2">
+                            <p class="child-p2">
+                            <span><span class="popup-tr2">Cast:</span> Samantha Asesor, Lariesh Buenviaje, Michael Dones, <span class="popup-more">more</span></span>
+                            <br>
+                            <br>
+                            <span><span class="popup-tr2">Genres:</span> Philippines, Drama, Short Film</span>
+                            <br>
+                            <br>
+                            <span><span class="popup-tr2">This movie is:</span> Sentimental, Emotional, Dark</p></span>
+                          </section>
+                          <section class="child3">
+                            <span><p class="child-p4">
+                            <br>
+                            <br class="display-br">
+                            <span class="popup-tr3">About <b>Struggles Unfold</b> </span></span>
+                            <br>
+                            <span><span class="popup-tr2">Director: </span>Samantha Asesor</span>
+                            <br>
+                            <span><span class="popup-tr2">Cast: </span>Samantha Asesor, Lariesh Buenviaje, Cristyll Torres, Alisha Casiple, Marco Adonis, Michael Dones, Dareen Tibon, Mae Griña</span>
+                            <br>
+                            <span><span class="popup-tr2">Writer: </span>Samantha Asesor</span>
+                            <br>
+                            <span><span class="popup-tr2">Genres: </span>Philippines, Drama, Short Film</span>
+                            <br>
+                            <span><span class="popup-tr2">This movie is: </span>Sentimental, Emotional, Dark</span>
+                            <br>
+                            <span><span class="popup-tr2">Maturity rating: </span>&nbsp&nbsp&nbsp<span class="badge badge-secondary p-2">13+</span> Recommended for ages 13 and up</p></span>
+                        </section>
+                  </div>
+                </div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a href="#" class="video-open playbtn">
-                <img src="images/play.png" class="play" alt="" />
-                <span class="w-trailor">Watch Trailer</span>
-              </a>
             </div>
           </div>
         </div>
@@ -911,6 +956,7 @@
   <script src="js/slick-animation.min.js"></script>
 
   <script src="main.js"></script>
+  <script src="popup/popup.js"></script>
 </body>
 
 </html>

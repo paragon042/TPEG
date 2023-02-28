@@ -1023,6 +1023,7 @@ h6, .h6{
 .btn-link{
     background: transparent;
     color: #fff;
+    text-decoration: none;
 }
 .btn-link:hover{
     color: #e50914;
@@ -2057,6 +2058,11 @@ background: rgba(0, 0, 0, 0.8);
 .trending-info .trending-dec{
     margin-bottom: 30px;
     width: 35%;
+}
+.trending-info .trending-dec1{
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: xx-small;
 }
 .trending-info .block-social{
     height: 45px;

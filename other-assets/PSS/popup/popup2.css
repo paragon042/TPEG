@@ -1,0 +1,326 @@
+.popup-btn{
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    padding: 1.8em;
+}
+
+.popup .popup-overla{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: none;
+}
+
+.popup-overla{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 1000vw;
+    height: 1000vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: none;
+}
+
+.popup-titl{
+    font-family: 'Playfair Display', serif;
+    background: url(images/texure.jpg);
+    color: transparent;
+    background-clip: text;
+    -webkit-font-smoothing : antialiased;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+
+.popup .popup-content{
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #1d1d1d;
+    width: 110%;
+    height: 420px;
+    z-index: 2000;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+.scroll-content{
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.child{
+    borde: 1px solid blue;
+    display: flex;
+    float: left;
+    width: 70%;
+}
+
+.child2{
+    borde: 1px solid blue;
+    display: flex;
+    overflow: visible;
+    float: left;
+    width: 30%;
+    height: 300px ;
+}
+
+.child3{
+    borde: 1px solid blue;
+    width: 30%;
+    height: 200px ;
+    transform: translateY(-30%);
+}
+
+.child .child-p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: 0;
+    text-align: left;
+    width: 40px;
+    height: 250px;
+    font-weight: 500;
+    color: #fff;
+    padding-right: 5%;
+}
+
+.child2 .child-p2{
+    display: flex;
+    object-fit: contain;
+    text-align: left;
+    width: 30%;
+    height: 250px;
+    opacity: 1;
+    font-weight: 500;
+    font-size: small;
+    color: #fff;
+}
+
+.child3 .child-p3{
+    display: flex;
+    object-fit: contain;
+    text-align: left;
+    width: 30%;
+    height: 250px;
+    opacity: 1;
+    font-weight: 900;
+    font-size: x-large;
+    color: #fff;
+}
+
+.child3 .child-p4{
+    display: flex;
+    object-fit: contain;
+    text-align: left;
+    width: 30%;
+    height: 400px;
+    opacity: 1;
+    font-weight: 200;
+    font-size: x-large;
+    color: #fff;
+    padding-right: 40%;
+}
+
+.child2 .popup-more{
+    font-size: small;
+    font-style: italic;
+}
+
+.popup-tr2{
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    opacity: 0.5;
+    font-size: small;
+}
+
+.popup-tr3{
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-weight: 300;
+    opacity: 0.9;
+    color: #fff;
+    font-size: x-large;
+}
+
+.popup-btn:hover{
+    transition: all 250ms ease-in-out;
+    color: red;
+}
+
+.popup .popup-close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background: #0c0c0c;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 100;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .popup-overlay{
+    display: block;
+}
+
+.popup.active .popup-overlay{
+    display: block;
+}
+
+.popup.active .popup-content{
+    transition: all 250ms ease-in-out;
+    transform: translate(-46%, -95%) scale(1);
+}
+
+.display-br{
+    display: none;
+}
+
+.symbols-popup{
+    margin-left: 0.75rem!important;
+    width: 20px;
+    display: flex;
+}
+
+@media (max-width : 1200px){
+    .popup .popup-content{
+        position: absolute;
+        top: 0%;
+        left: 100%;
+        transform: translate(-50%, -50%) scale(0);
+        background: #1d1d1d;
+        width: 70%;
+        height: 420px;
+        z-index: 2000;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 1em;
+        text-decoration: none;
+    }
+    .popup.active .popup-content{
+        transition: all 250ms ease-in-out;
+        transform: translate(-120%, -95%) scale(1);
+    }
+}
+
+@media (max-width :991px){
+    .child3 .child-p4{
+        display: flex;
+        object-fit: contain;
+        text-align: left;
+        width: 30%;
+        height: 360px;
+        opacity: 1;
+        font-weight: 200;
+        font-size: x-large;
+        color: #fff;
+        padding-right: 100%;
+    }
+}
+
+@media (max-width :767px){
+    .child .child-p{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        left: 0;
+        text-align: left;
+        width: 40px;
+        height: 350px;
+        font-weight: 500;
+        color: #fff;
+        padding-right: 5%;
+    }
+    .child2{
+        borde: 1px solid blue;
+        display: none;
+        overflow: visible;
+        float: left;
+        width: 30%;
+        height: 300px ;
+    }
+    .child3{
+        borde: 1px solid blue;
+        width: 150%;
+        height: 300px ;
+        transform: translateY(-20%);
+    }
+    .child3 .child-p4{
+        display: flex;
+        object-fit: contain;
+        text-align: left;
+        width: 150%;
+        height: 580px;
+        opacity: 1;
+        font-weight: 200;
+        font-size: x-large;
+        color: #fff;
+        padding-right: 40%;
+    }
+    .scroll-content{
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 380px;
+    }
+    
+    *{
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width : 479px){
+    .child .child-p{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        left: 0;
+        text-align: left;
+        width: 40px;
+        height: 500px;
+        font-weight: 500;
+        color: #fff;
+        padding-right: 5%;
+    }
+    .child3{
+        borde: 1px solid blue;
+        width: 150%;
+        height: 400px ;
+        transform: translateY(-20%);
+    }
+    .child3 .child-p4{
+        display: flex;
+        object-fit: contain;
+        text-align: left;
+        width: 150%;
+        height: 750px;
+        opacity: 1;
+        font-weight: 200;
+        font-size: x-large;
+        color: #fff;
+        padding-right: 40%;
+    }
+    .display-br{
+        display: block;
+    }
+}
