@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Numble</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="wrapper" class="center">
+  <div id="header">
+    
+     <div class="absleft">
+       <button class="smallbutton" onclick="populateNumble()" alt="New game" title="New game"><p class="material-icons">refresh</p></button>
+       <button id="hardmodebutton" class="smallbutton" onclick="toggleHardmode()" alt="Hard mode is off" title="Hard mode is off"><p class="material-icons">sentiment_satisfied_alt</p></button>
+       </div>
+    
+    <div class="absright">
+      <button class="smallbutton" onclick="togglePanel('about','block')" alt="About Numble" title="About Numble"><p class="material-icons">question_mark</p></button>
+    </div>
+    
+    <h1>Numble</h1>
+  </div>
+  <hr>
+  <table id="numbers" class="center">
+  </table>
+  <div id="numpad"></div>
+  
+  
+</div>
+<div id="messages" class="flex">
+
+  <div id="about" class=""><div class="absright"><button class="smallbutton" onclick="togglePanel('about', 'none')"><p class="material-icons">close</p></button>
+  </div>
+    A <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> clone made with numbers, because why not?<br><br>
+    It's <b>not daily,</b> so play as many times as you like!<br><br>
+    Numbers are between 10,000 and 99,999.<br><br>Key in a number and press Enter to submit.<br><br>
+    <table><tr>
+      <td><p>3</p></td>
+      <td><p>1</p></td>
+      <td><p>9</p></td>
+      <td class="green"><p>7</p></td>
+      <td><p>8</p></td>
+      </tr>
+    </table><br><br>
+    Green signifies a correct number.<br><br>
+    <table><tr>
+      <td class="right"><p>3</p></td>
+      <td><p>1</p></td>
+      <td class="left"><p>9</p></td>
+      <td class="green"><p>7</p></td>
+      <td><p>8</p></td>
+      </tr>
+    </table><br><br>
+    Yellow is correct, but in the wrong place<br><br>
+    Arrows point towards the correct location of a number.<br><br>
+    <table><tr>
+      <td class="green"><p>9</p></td>
+      <td class="green"><p>3</p></td>
+      <td class="right"><p>2</p></td>
+      <td class="green"><p>7</p></td>
+      <td><p>8</p></td>
+      </tr>
+    </table><br><br>
+    Home: <a href="https://paragon042.github.io/TPEG/" target="_blank">TPEG</a><br><br>
+  </div>
+  <div id="winner" class="abscenter"><div class="absright"><button class="smallbutton" onclick="togglePanel('winner', 'none')"><p class="material-icons">close</p></button></div>
+    <h1>Winner!</h1>
+    <p id="sharedata">&#x2B1B;&#x2B1B;&#x1F7E9;&#x1F7E9;&#x2B1B;<br/>&#x2B1B;&#x2B1B;&#x2B1B;&#x2B1B;&#x2B1B;<br/>&#x1F7E9;&#x1F7E9;&#x1F7E9;&#x1F7E9;&#x1F7E9;<br/></p><br/>
+    <button id="sharebutton">Share</button>
+  </div>
+  
+
+  <span id="hardmodenotification">Hardmode ON!</span>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
