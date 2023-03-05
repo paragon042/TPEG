@@ -103,7 +103,7 @@ button{
   box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
   transition: opacity 0.2s linear;
   transform: translate(57%, 0%);
-  display: none;
+  display: non;
 }
 
 .modal .modal-header {
@@ -159,7 +159,7 @@ button{
   width: 100%;
   bottom: 0;
   padding: 0 52px;
-  margin-bottom: 70px;
+  margin-bottom: 35px;
   z-index: 2;
 }
 
@@ -285,7 +285,6 @@ button{
   margin-right: 10px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 62.5%;
 }
 
 .modal .modal-body .modal-content-first .modal-description span:first-child {
@@ -304,7 +303,6 @@ button{
   width: 30px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 62.5%;
 }
 
 .modal .modal-body .modal-content-first .modal-description .description-badge {
@@ -320,7 +318,6 @@ button{
   white-space: nowrap;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 62.5%;
 }
 
 .modal .modal-body .modal-content-first p {
@@ -441,12 +438,6 @@ button{
 }
 
 @media screen and (max-width: 768px) {
-  .modal .modal-header .header-content .header-title .header-buttons .add,
-  .modal .modal-header .header-content .header-title .header-buttons .rate,
-  .modal .modal-header .header-content .header-title .header-buttons .volume {
-    width: 32px;
-    height: 32px;
-  }
 
   .modal .modal-header .header-content {
     margin-bottom: 40px;
@@ -608,11 +599,15 @@ button{
     border-radius: 6px;
     transform: translate(-1.4%, 0%);
   }
+  .modal .modal-header .header-content .header-title .header-buttons .play,
+  .modal .modal-header .header-content .header-title > img{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 362px) {
   .modal {
-    width: 330px;
+    width: 331px;
     margin: 20px 20px;
     border-radius: 6px;
     transform: translate(-1.4%, 0%);
