@@ -854,6 +854,9 @@ header#main-header.menu-sticky{
 #home-slider .slick-bg.s-bg-4{
     background-image: url(images/slider/slider4.jpg);
 }
+#home-slider .slick-bg.s-bg-5{
+    background-image: url(images/slider/slider5.jpg);
+}
 
 .slick-bg::before{
     content: "";

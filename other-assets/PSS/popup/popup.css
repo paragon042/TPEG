@@ -1,285 +1,377 @@
-.popup-btn{
-    background: transparent;
-    color: #ffffff;
-    border: none;
-    text-decoration: none;
-    padding: 1.8em;
+/*
+
+Netflix Modal v0.0.2
+Created by: Gabriel Almeida
+Buy Me a Coffee: https://bit.ly/3NlkAGU
+Github: https://bit.ly/3IG2aQe
+
+changelog:
+  v0.0.2
+  New - SVG Icons.
+  New - Switch Volume 100% To 0% (LocalStorage - JavaScript).
+  Fix - Responsive Design.
+  Fix - Improved HTML.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Cores */
+:root {
+  --background: #141414;
+  --modal: #181818;
+  --white: #ffffff;
 }
 
-.popup .popup-overla{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.7);
-    z-index: 1000;
-    display: none;
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
 }
 
-.popup-overla{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 1000vw;
-    height: 1000vh;
-    background: rgba(0,0,0,0.7);
-    z-index: 1000;
-    display: none;
+html {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
 }
 
-.popup-titl{
-    font-family: 'Playfair Display', serif;
-    background: url(images/texure.jpg);
-    color: transparent;
-    background-clip: text;
-    -webkit-font-smoothing : antialiased;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
- }
-
-.popup .popup-content{
-    position: absolute;
-    top: 0%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(0);
-    background: #1d1d1d;
-    width: 100%;
-    height: 600px;
-    z-index: 20000;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 1em;
-    text-decoration: none;
+/* Modal */
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  min-height: 100vh;
+  background-color: var(--background);
 }
 
-.popup-tl{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    left: 0;
-    text-align: left;
-    padding-left: 2%;
-    padding-right: 2%;
-    width: 70%;
-    height: 200px;
-    font-weight: 500;
-    color: #fff;
-    word-wrap: break-word;
+#wrapper > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  cursor: pointer;
+  max-height: 42px;
+  min-height: 32px;
+  font-size: 1.6rem;
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 2rem;
+  padding-right: 2.4rem;
+  background-color: var(--white);
+  color: var(--background);
+  font-weight: 700;
+  line-height: 2.4rem;
+  position: absolute;
+  z-index: 90;
 }
 
-.popup-p{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    left: 0;
-    text-align: left;
-    padding-left: 2%;
-    padding-right: 2%;
-    width: 10%;
-    height: 200px;
-    font-weight: 500;
-    color: #fff;
-    word-wrap: break-word;
+#wrapper > button svg {
+  margin-right: 10px;
 }
 
-.popup-bl{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    object-fit: contain;
-    text-align: left;
-    padding-left: 0%;
-    width: 70%;
-    height: 10vh;
-    font-weight: 500;
-    color: #fff;
-    word-wrap: break-word;
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 870px;
+  margin: 20px 20px;
+  border-radius: 6px;
+  z-index: 100;
+  background-color: var(--modal);
+  box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
+  transition: opacity 0.2s linear;
+  transform: translate(0, -50%);
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-.popup-bl1{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: relative;
-    right: 0;
-    object-fit: contain;
-    text-align: left;
-    padding-top: 20em;
-    padding-left: 0%;
-    width: 70%;
-    height: 100%;
-    opacity: 1;
-    font-weight: 500;
-    font-size: smaller;
-    color: #fff;
-    transform: translateY(-25%);
+.modal .modal-header {
+  position: relative;
 }
 
-.popup-bl2{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: sticky;
-    right: 0;
-    object-fit: contain;
-    text-align: left;
-    padding-top: 0;
-    padding-left: 0%;
-    width: 70%;
-    height: 100%;
-    opacity: 1;
-    font-weight: 500;
-    font-size: smaller;
-    color: #fff;
+.modal .modal-header::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  background: linear-gradient(0deg, var(--modal), transparent 50%);
 }
 
-.popup-bl3{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: sticky;
-    right: 0;
-    object-fit: contain;
-    text-align: left;
-    padding-top: 0;
-    padding-left: 0%;
-    width: 70%;
-    height: 100%;
-    opacity: 1;
-    font-weight: 500;
-    font-size: smaller;
-    color: #fff;
+.modal .modal-header video {
+  border-radius: 6px 6px 0 0;
+  display: block;
+  width: 100%;
+  opacity: 1;
 }
 
-.popup-tr{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: relative;
-    right: 0;
-    object-fit: contain;
-    text-align: left;
-    width: 10px;
-    height: 100%;
-    opacity: 0.5;
-    font-size: small;
+.modal .modal-header .close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  z-index: 2;
+  cursor: pointer;
+  background-color: var(--modal);
+  color: var(--white);
+  border-radius: 50%;
+  height: 36px;
+  padding: 8px;
+  width: 36px;
+  border: 0;
 }
 
-.popup-ct{
-    display: flex;
-    position: fixed;
-    right: 0;
-    object-fit: contain;
-    text-align: left;
-    padding-top: 6.4em;
-    width: 30%;
-    height: 100%;
-    opacity: 1;
-    font-weight: 500;
-    font-size: smaller;
-    color: #fff;
+.modal .modal-header .close svg {
+  outline: none;
 }
 
-.popup-tr1{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    right: 0;
-    object-fit: contain;
-    text-align: left;
-    width: 30%;
-    height: 100%;
-    opacity: 1;
-    font-weight: 500;
-    font-size: smaller;
-    color: #fff;
+.modal .modal-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0 52px;
+  margin-bottom: 70px;
+  z-index: 2;
 }
 
-.popup-tr1 p{
-    display: flex;
+.modal .modal-header .header-content .header-title {
+  width: 100%;
 }
 
-.popup-tr2{
-    position: relative;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    width: 10px;
-    height: 100%;
-    opacity: 0.5;
-    font-size: small;
+.modal .modal-header .header-content .header-title > img {
+  width: 40%;
+  margin-bottom: 1.5em;
 }
 
-.popup-tr3{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    right: 0;
-    object-fit: contain;
-    text-align: left;
-    padding-top: 4em;
-    width: 30%;
-    height: 100%;
-    opacity: 1;
-    font-weight: 500;
-    font-size: smaller;
-    color: #fff;
+.modal .modal-header .header-content .header-title .header-buttons {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
-.popup-tr4{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    right: 0;
-    object-fit: contain;
-    text-align: left;
-    padding-top: 6.4em;
-    width: 30%;
-    height: 100%;
-    opacity: 1;
-    font-weight: 500;
-    font-size: smaller;
-    color: #fff;
+.modal .modal-header .header-content .header-title .header-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  cursor: pointer;
+  max-height: 42px;
+  min-height: 32px;
+  font-size: 1.6rem;
 }
 
-.popup-btn:hover{
-    transition: all 250ms ease-in-out;
-    color: red;
+.modal .modal-header .header-content .header-title .header-buttons .play,
+.modal .modal-header .header-content .header-title .header-buttons .add {
+  margin-right: 10px;
 }
 
-.popup .popup-close-btn{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    width: 40px;
-    height: 40px;
-    background: #0c0c0c;
-    color: #fff;
-    font-size: 35px;
-    font-weight: 100;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 50%;
+.modal .modal-header .header-content .header-title .header-buttons .play {
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 2rem;
+  padding-right: 2.4rem;
+  background-color: var(--white);
+  color: var(--background);
+  font-weight: 700;
+  line-height: 2.4rem;
 }
 
-.popup.active .popup-overlay{
-    display: block;
+.modal .modal-header .header-content .header-title .header-buttons .play svg {
+  height: 100%;
+  width: 100%;
+  margin-right: 10px;
 }
 
-.popup.active .popup-overlay{
-    display: block;
+.modal .modal-header .header-content .header-title .header-buttons .volume,
+.modal .modal-header .header-content .header-title .header-buttons .add,
+.modal .modal-header .header-content .header-title .header-buttons .rate {
+  max-width: 42px;
+  min-width: 32px;
+  background-color: rgba(42, 42, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-width: 2px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  color: var(--white);
+  border-radius: 50%;
 }
 
-.popup.active .popup-content{
-    transition: all 250ms ease-in-out;
-    transform: translate(-50%, -75%) scale(1);
+.modal
+  .modal-header
+  .header-content
+  .header-title
+  .header-buttons
+  .volume:hover,
+.modal .modal-header .header-content .header-title .header-buttons .add:hover,
+.modal .modal-header .header-content .header-title .header-buttons .rate:hover {
+  border-color: var(--white);
+  background-color: rgba(42, 42, 42, 1);
+}
+
+.modal .modal-header .header-content .header-title .header-buttons .volume {
+  position: absolute;
+  right: 0;
+  opacity: 0.4;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.modal
+  .modal-header
+  .header-content
+  .header-title
+  .header-buttons
+  .volume:hover {
+  opacity: 1;
+}
+
+.modal .modal-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 10px;
+  padding: 15px 48px;
+}
+
+.modal .modal-body .modal-content-first {
+  padding-right: 40px;
+  line-height: 25px;
+}
+
+.modal .modal-body .modal-content-first .modal-description {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal .modal-body .modal-content-first .modal-description span,
+.modal .modal-body .modal-content-first .modal-description svg {
+  margin-right: 10px;
+}
+
+.modal .modal-body .modal-content-first .modal-description span:first-child {
+  color: #46d369;
+}
+
+.modal .modal-body .modal-content-first .modal-description span {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.modal .modal-body .modal-content-first .modal-description svg {
+  width: 30px;
+}
+
+.modal .modal-body .modal-content-first .modal-description .description-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  border: 1px solid hsla(0, 0%, 100%, 0.4);
+  border-radius: 3px;
+  color: hsla(0, 0%, 100%, 0.9);
+  font-size: 1.2rem;
+  padding: 0 0.5em;
+  white-space: nowrap;
+}
+
+.modal .modal-body .modal-content-first p {
+  font-size: 1.4rem;
+  line-height: 24px;
+  word-break: break-word;
+}
+
+.modal .modal-body .modal-content-second {
+  word-break: break-word;
+}
+
+.modal .modal-body .modal-content-second span {
+  line-height: 20px;
+}
+
+.modal .modal-body .modal-content-second .title {
+  color: #777;
+}
+
+.modal .modal-body .modal-content-second .cast,
+.modal .modal-body .modal-content-second .genres,
+.modal .modal-body .modal-content-second .show {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.modal .modal-body .modal-content-second .cast span:hover,
+.modal .modal-body .modal-content-second .genres span:hover,
+.modal .modal-body .modal-content-second .show span:hover {
+  text-decoration: underline;
+}
+
+.modal .modal-body .modal-content-first,
+.modal .modal-body .modal-content-second {
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.visuallyhidden {
+  opacity: 0;
+}
+
+@media screen and (min-width: 1080px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 768px) {
+  .modal .modal-header .header-content .header-title .header-buttons .add,
+  .modal .modal-header .header-content .header-title .header-buttons .rate,
+  .modal .modal-header .header-content .header-title .header-buttons .volume {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal .modal-header .header-content {
+    margin-bottom: 40px;
+  }
+
+  .modal .modal-header .header-content .header-title .header-buttons .play {
+    height: 32px;
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 688px) {
+  .modal .modal-body {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .modal .modal-body .modal-content-second {
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 375px) {
 }
