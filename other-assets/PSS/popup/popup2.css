@@ -103,7 +103,7 @@ button{
   box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
   transition: opacity 0.2s linear;
   transform: translate(57%, 0%);
-  display: non;
+  display: none;
 }
 
 .modal .modal-header {
