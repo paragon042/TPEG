@@ -4,11 +4,16 @@
 }
 
 .symbols1{
-    margin-left: 0.75rem!important;
-    width: 20px;
+    margin-left: 0.5rem!important;
+    width: 25px;
 }
 
 .ml-10{
     margin-left: 0.3rem;
     color: rgba(255, 255, 255, 0.671);
+}
+
+.symbols2{
+    margin-left: 0rem!important;
+    width: 30px;
 }

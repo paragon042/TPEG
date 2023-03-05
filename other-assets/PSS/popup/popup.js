@@ -1,6 +1,6 @@
-// Variables
+// Variáveis
 const modalContainer = document.querySelector(".modal");
-const openButton = document.querySelector(".open");
+const openButton = document.querySelector(".btn-open");
 const closeButton = document.querySelector(".close");
 const volumeButton = document.querySelector(".volume");
 const playButton = document.querySelector(".play");
@@ -11,9 +11,9 @@ const volume100 =
 
 let volume = (document.getElementsByTagName("video")[0].volume = 0);
 
-// When loading the window, check that the icons are correct.
+// Ao carregar a janela, verifique se os ícones estão corretos.
 window.onload = function () {
-  // If volume is equal to 0, then put no volume icon. If not equal to 0, put the icon with volume.
+  // Se volume for igual a 0, então coloque o ícone sem volume. Senão for igual a 0, coloque o ícone com volume.
   volume == 0
     ? (document.querySelector(".volume").innerHTML = volume0)
     : (document.querySelector(".volume").innerHTML = volume100);
@@ -21,22 +21,22 @@ window.onload = function () {
 
 function volumeHandler() {
   if (volume == 0) {
-    // If the volume equals 0, activate it and place it in LocalStorage.
+    // Se o volume for igual a 0, ative-o e coloque no LocalStorage.
     volume = 1;
     document.getElementsByTagName("video")[0].volume = 1;
     document.querySelector(".volume").innerHTML = volume100;
   } else {
-    // Otherwise leave it disabled.
+    // Senão deixe ele desativado.
     volume = 0;
     document.getElementsByTagName("video")[0].volume = 0;
     document.querySelector(".volume").innerHTML = volume0;
   }
 
-  // Everything on top?!
+  // Tudo em cima?!
   console.log(volume);
 }
 
-// Buttons
+// Botões
 openButton.addEventListener("click", () => {
   modalContainer.style.display = "flex";
 });
@@ -49,5 +49,5 @@ closeButton.addEventListener(
 volumeButton.addEventListener("click", volumeHandler);
 
 playButton.addEventListener("click", () =>
-  window.open("https://www.buymeacoffee.com/pingo")
+  window.location.href = "intros/SUIntro.html"
 );
