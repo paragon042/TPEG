@@ -57,6 +57,13 @@ body{
 
 }
 
+.imglock{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+
 /* *********** Responsiveness of header ************** */
 @media (min-width : 1300px){
 
