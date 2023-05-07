@@ -225,11 +225,10 @@
                     <a href="#" class="search-toggle device-search">
                       <i class="fa fa-search"></i>
                     </a>
-                    <div class="search-box iq-search-bar d-search">
-                      <form action="#" class="searchbox">
+                    <div class="search-box iq-search-bar">
+                      <form class="searchbox">
                         <div class="form-group position-relative">
-                          <input type="text" class="text search-input font-size-12"
-                            placeholder="type here to search..." />
+                          <input type="text" class="text search-input font-size-12" placeholder="Titles, people, genres" value="" id="search" oninput="openPage()" />
                           <i class="search-link fa fa-search"></i>
                         </div>
                       </form>
@@ -529,9 +528,76 @@
 </div>
 
   <!-- slider starts  -->
-  <!-- slider 1 -->
+  <!-- slider 0 -->
   <section id="home" class="iq-main-slider p-0">
     <div id="home-slider" class="slider m-0 p-0">
+      <div class="slide slick-bg s-bg-6">
+        <div class="container-fluid position-relative h-100">
+          <div class="slider-inner h-100">
+            <div class="row align-items-center h--100">
+              <div class="col-xl-6 col-lg-12 col-md-12">
+            <a href="ParagonOriginals.html">
+              <div class="channel-logo" data-animation-in="fadeInLeft" data-delay-in="0.5">
+                <img src="images/paragon original.png" class="c-logo" alt="" />
+              </div>
+            </a>
+            <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
+              data-delay-in="0.6">
+              El Fili - The Musical | Group A
+            </h1>
+            <div class="d-flex flex-wrap align-items-center fadeInLeft animated" data-animation-in="fadeInLeft"
+              style="opacity: 1">
+              <div class="slider-ratting d-flex align-items-center mr-4 mt-2 mt-md-3">
+                <ul
+                  class="ratting-start p-0 m-0 list-inline text-primary d-flex align-items-center justify-content-left">
+                  <li><i class="fa fa-star-o"></i></li>
+                  <li><i class="fa fa-star-o"></i></li>
+                  <li><i class="fa fa-star-o"></i></li>
+                  <li><i class="fa fa-star-o"></i></li>
+                  <li><i class="fa fa-star-o"></i></li>
+                </ul>
+                <span class="text-white ml-2">NR (CTFCA)</span>
+              </div>
+              <div class="d-flex align-items-center mt-2 mt-md-3">
+                <span class="badge badge-secondary p-2">13+</span>
+                <span class="ml-3">14min</span>
+                <img class="symbols" src="images/symbols/hd icon.png">
+                <img class="symbols" src="images/symbols/closed caption.png">
+              </div>
+            </div>
+            <p class="bold" data-animation-in="fadeInUp">
+              The poem highlights the different forms of victimization that people experience, from physical violence to emotional and psychological abuse. 
+              It shows that these forms of victimization are prevalent in society and that anyone can become a victim. 
+              The use of the different names and stories of the victims underscores the idea that there are countless individuals out there who have experienced similar circumstances. 
+              Overall, the poem is a reflection on the harsh realities of life and the struggles that people endure.
+            </p>
+            <div class="trending-list" data-animation-in="fadeInLeft" data-delay-in="1.2">
+              <div class="text-primary1 title starring">
+                Starring :
+                <span class="text-body">Dareen Tibon, James Gajolin, Mae Grina, Michael Dones, Hedrix Bryan, Hannah Badua, Clarisse Kyt, Robert Ramos, Jezzel Anne, Janelle Romualdo, Sadie Nireel, Marcus Diones</span>
+              </div>
+              <div class="text-primary title genres">
+                Genres : <span class="text-body">Drama, Musical</span>
+              </div>
+              <div class="text-primary title tag">
+                Tags :
+                <span class="text-body">Musical Play</span>
+              </div>
+              <div class="text-primary title tag">
+                Production :
+                <span class="text-body">Paragon Entertainment Group Productions</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center r-mb-23 mt-4" data-animation-in="fadeInUp" data-delay-in="1.2">
+              <a href="intros/EFGAIntro.html" class="btn btn-hover iq-button"><i class="fa fa-play mr-3"></i>Play Now</a>
+              <a href="#" class="btn btn-link">More Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slider 1 -->
       <div class="slide slick-bg s-bg-1">
         <div class="container-fluid position-relative h-100">
           <div class="slider-inner h-100">
@@ -595,7 +661,7 @@
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM13 10V18H11V10H13ZM12 8.5C12.8284 8.5 13.5 7.82843 13.5 7C13.5 6.17157 12.8284 5.5 12 5.5C11.1716 5.5 10.5 6.17157 10.5 7C10.5 7.82843 11.1716 8.5 12 8.5Z" fill="currentColor"></path>
                       </svg>
-                      More Info
+                      <!--More Info-->
                     </button>
                 </div>
               </div>
@@ -821,6 +887,33 @@
             </div>
             <div class="favorite-contens">
               <ul class="favorites-slider list-inline row p-0 mb-0">
+                <!-- slide item 0 -->
+                <li class="slide-item">
+                  <div class="block-images position-relative">
+                    <a href="intros/EFGAIntro.html">
+                    <div class="img-box">
+                      <img src="images/slider/slider6.png" class="img-fluid" alt="" />
+                    </div>
+                    <div class="block-description">
+                      <h6 class="iq-title">
+                        El Fili - The Musical | Group A
+                      </h6>
+                      <div class="movie-time d-flex align-items-center my-2">
+                        <div class="badge badge-secondary p-1 mr-2">13+</div>
+                          <span class="ml-10">14min</span>
+                          <img class="symbols1" src="images/symbols/hd icon.png">
+                          <img class="symbols1" src="images/symbols/closed caption.png">
+                      </div>
+                      <div class="hover-buttons">
+                        <span class="btn btn-hover iq-button">
+                          <i class="fa fa-play mr-1"></i>
+                          Play Now
+                        </span>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </li>
                 <!-- slide item 1 -->
                 <li class="slide-item">
                   <div class="block-images position-relative">
@@ -1056,6 +1149,33 @@
             </div>
             <div class="favorite-contens">
               <ul class="favorites-slider list-inline row p-0 mb-0">
+                <!-- slide item 0 -->
+                <li class="slide-item">
+                  <div class="block-images position-relative">
+                    <a href="intros/EFGAIntro.html">
+                    <div class="img-box">
+                      <img src="images/slider/slider6.png" class="img-fluid" alt="" />
+                    </div>
+                    <div class="block-description">
+                      <h6 class="iq-title">
+                        El Fili - The Musical | Group A
+                      </h6>
+                      <div class="movie-time d-flex align-items-center my-2">
+                        <div class="badge badge-secondary p-1 mr-2">13+</div>
+                          <span class="ml-10">14min</span>
+                          <img class="symbols1" src="images/symbols/hd icon.png">
+                          <img class="symbols1" src="images/symbols/closed caption.png">
+                      </div>
+                      <div class="hover-buttons">
+                        <span class="btn btn-hover iq-button">
+                          <i class="fa fa-play mr-1"></i>
+                          Play Now
+                        </span>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </li>
                 <!-- slide item 1 -->
                 <li class="slide-item">
                   <div class="block-images position-relative">
@@ -1563,6 +1683,7 @@
   <script src="js/select2.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/slick-animation.min.js"></script>
+  <script src="js/search.js"></script>
 
   <script src="main.js"></script>
   <script src="popup/popup.js"></script>
